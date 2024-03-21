@@ -1,2 +1,1 @@
-# JuniorBuggyTimeTracker
-Simple time tracking system, using Arduino, serial communication with RFID
+# Junior Buggy TimeTracker
