@@ -1,0 +1,41 @@
+<h1>Allgemeine Informationen</h1>
+<div class="general-information-container">
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="venue-input-field">Austragungsort</span>
+        <input type="text" class="form-control" placeholder="" aria-label="Venue"
+            aria-describedby="venue-input-field">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="tracklength-input-field">Streckenlänge (Meter)</span>
+        <input type="text" class="form-control" placeholder="" aria-label="Tracklength"
+            aria-describedby="tracklength-input-field">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="trackrounds-input-field">Rundenanzahl</span>
+        <input type="text" class="form-control" placeholder="" aria-label="Trackrounds"
+            aria-describedby="trackrounds-input-field">
+    </div>
+</div>
+<h1>Teilnehmer</h1>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">Fahrer Nummer</th>
+			<th scope="col">Vorname</th>
+			<th scope="col">Nachname</th>
+			<th scope="col">Gefahrene Läufe</th>
+            <th scope="col">Bestzeit</th>
+            <th scope="col">Gefahrene Läufe</th>
+		</tr>
+	</thead>
+	<tbody>
+			<tr *ngFor="let r of racer; index as i;">
+				<td>{{ r.racerId }}</td>
+				<td>{{ r.firstname }}</td>
+				<td>{{ r.lastname }}</td>
+                <td>{{ r.heats }}</td>
+                <td>{{ r.besttime }}</td>
+                <td>{{ r.topspeed }}</td>
+			</tr>
+	</tbody>
+</table>
