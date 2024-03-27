@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class AppComponent {
   title = 'JuniorBuggyTimeTracker';
 
+  tournamentReady: boolean = false;
   data: any;
 
   links = [

@@ -22,4 +22,12 @@ export class TournamentComponent {
     {firstname: "Black", lastname: "Geraldine", racerId: "69"},
     {firstname: "Lee", lastname: "Jim", racerId: "127"},
   ]
+
+  public deleteRacer (racerId: string) {
+
+  }
+
+  public editRacer (racer: Racer) {
+    
+  }
 }

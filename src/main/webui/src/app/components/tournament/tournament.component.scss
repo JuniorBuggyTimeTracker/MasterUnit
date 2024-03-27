@@ -1,15 +1,20 @@
+.racer-container,
 .general-information-container {
-    display: inline-flex;
-
-    div {
-        margin: 1rem;
+  display: inline-flex;
+  margin-bottom: 1rem;
+  width: 100%;
+  .subtitle-container {
+      width: 100%;
+  }
+  div {
+    margin: 1rem 1rem 1rem 0rem;
+    &:last-child {
+      margin: 1rem 0rem 1rem 0rem;
     }
+  }
 }
 
-h1 {
-    margin: 1rem;
-}
-table {
-    margin: 1rem;
-    width: 100%;
-}
+.icon-button-col{
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    }

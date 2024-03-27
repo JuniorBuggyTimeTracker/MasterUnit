@@ -4,11 +4,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TournamentComponent } from './components/tournament/tournament.component';
+import { DashIfEmptyPipe } from './utils/pipes/dash-if-empty.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TournamentComponent
+    TournamentComponent,
+    DashIfEmptyPipe
   ],
   imports: [
     BrowserModule,
