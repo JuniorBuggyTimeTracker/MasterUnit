@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Racer } from '../../utils/racer.interface';
+import { Racer } from '../../utils/driver.interface';
 
 @Component({
   selector: 'app-tournament',
@@ -8,7 +8,7 @@ import { Racer } from '../../utils/racer.interface';
 })
 export class TournamentComponent {
 
-  racer: Racer[] = [
+  driver: Racer[] = [
     {firstname: "Max", lastname: "Müller", racerId: "4711"},
     {firstname: "Williams", lastname: "Ernest", racerId: "123"},
     {firstname: "Cruz", lastname: "Henrika", racerId: "1545"},
@@ -27,7 +27,7 @@ export class TournamentComponent {
 
   }
 
-  public editRacer (racer: Racer) {
-    
+  public editRacer (driver: Racer) {
+
   }
 }

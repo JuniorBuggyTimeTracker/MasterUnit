@@ -13,8 +13,8 @@ import jakarta.websocket.server.PathParam;
 import jakarta.websocket.server.ServerEndpoint;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import solutions.pge.models.Measurement;
-import solutions.pge.models.WebSocketMessage;
+import solutions.pge.models.business.Measurement;
+import solutions.pge.models.technical.WebSocketMessage;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
