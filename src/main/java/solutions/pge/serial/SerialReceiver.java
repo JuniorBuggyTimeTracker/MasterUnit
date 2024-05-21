@@ -9,12 +9,14 @@ import jakarta.inject.Singleton;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
+
 @Startup
 @Singleton
 public class SerialReceiver implements SerialPortDataListener {
     private static final Logger log = LoggerFactory.getLogger(SerialReceiver.class);
 
-    private final SerialPort serialPort;
+    private SerialPort serialPort;
     private final SerialMessageConverter serialMessageConverter;
 
     @Inject
@@ -22,12 +24,16 @@ public class SerialReceiver implements SerialPortDataListener {
         this.serialMessageConverter = serialMessageConverter;
 
         System.setProperty("fazecast.jSerialComm.appid", "JBTT-MU");
-        serialPort = SerialPort.getCommPort("/dev/cu.usbmodem2201");
-        log.debug("Found serial port: {}", serialPort.getPortDescription().trim());
-        if(serialPort.openPort()){
-            serialPort.addDataListener(this);
-            log.debug("Connection for serial communication established");
-        } else {
+        try {
+            serialPort = SerialPort.getCommPort("/dev/cu.usbmodem2201");
+            log.debug("Found serial port: {}", serialPort.getPortDescription().trim());
+            if(serialPort.openPort()){
+                serialPort.addDataListener(this);
+                log.debug("Connection for serial communication established");
+            } else {
+                log.error("Unable to establish serial communication");
+            }
+        } catch (Exception e){
             log.error("Unable to establish serial communication");
         }
     }
