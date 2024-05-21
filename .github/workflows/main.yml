@@ -22,11 +22,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Install Brew
-        run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
       - name: Build application
         run: |
           echo "Building app"
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
           brew install quarkusio/tap/quarkus
           quarkus build
       - name: Log in to the Container registry
