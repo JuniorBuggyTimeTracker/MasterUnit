@@ -1,4 +1,4 @@
-export interface Racer {
+export interface Driver {
     racerId: string;
     firstname: string;
     lastname: string;

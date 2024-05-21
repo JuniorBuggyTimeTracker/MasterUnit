@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Racer } from '../../utils/driver.interface';
+import { Driver } from '../../utils/driver.interface';
 
 @Component({
   selector: 'app-tournament',
@@ -8,7 +8,7 @@ import { Racer } from '../../utils/driver.interface';
 })
 export class TournamentComponent {
 
-  driver: Racer[] = [
+  driver: Driver[] = [
     {firstname: "Max", lastname: "Müller", racerId: "4711"},
     {firstname: "Williams", lastname: "Ernest", racerId: "123"},
     {firstname: "Cruz", lastname: "Henrika", racerId: "1545"},
@@ -23,11 +23,11 @@ export class TournamentComponent {
     {firstname: "Lee", lastname: "Jim", racerId: "127"},
   ]
 
-  public deleteRacer (racerId: string) {
+  public deleteDriver (driverId: string) {
 
   }
 
-  public editRacer (driver: Racer) {
+  public editDriver (driver: Driver) {
 
   }
 }
