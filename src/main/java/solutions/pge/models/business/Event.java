@@ -8,7 +8,7 @@ public record Event(
         Club organizer,
         OffsetDateTime date,
         Integer runs,
-        Float trackLength
+        Double trackLength
 ) {
 
 }
