@@ -1,4 +1,4 @@
-package solutions.pge.models;
+package solutions.pge.models.business;
 
 import java.time.OffsetDateTime;
 

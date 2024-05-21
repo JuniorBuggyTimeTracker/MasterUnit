@@ -3,7 +3,7 @@ package solutions.pge.serial;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import solutions.pge.handler.MeasurementHandler;
-import solutions.pge.models.Measurement;
+import solutions.pge.models.business.Measurement;
 
 import java.util.regex.Pattern;
 

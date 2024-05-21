@@ -6,11 +6,9 @@ import jakarta.inject.Inject;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import solutions.pge.models.Measurement;
-import solutions.pge.serial.SerialReceiver;
+import solutions.pge.models.business.Measurement;
 
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalUnit;
 import java.util.HashMap;
 import java.util.Map;
 

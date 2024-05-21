@@ -1,4 +1,4 @@
-package solutions.pge.models;
+package solutions.pge.models.technical;
 
 public record WebSocketMessage(String topic, Object body) {
 }
